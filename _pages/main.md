@@ -11,12 +11,12 @@ redirect_from:
 <!-- markdownlint-disable MD033 -->
 <div class="intro-block">
   <p class="intro-block__line">
-    Hi there! I'm <strong>Kun Wu</strong>, a PhD student in Pattern Recognition and Intelligent Systems at Beihang University.
+    Hi there! I'm Kun Wu, a PhD student in Pattern Recognition and Intelligent Systems at Beihang University.
     I joined the <a href="https://remex-lab.github.io/">REMEX lab</a> in 2021, advised by Professor
     <a href="https://remex-lab.github.io/">Zhiguo Jiang</a> and Associate Professor
     <a href="https://zhengyushan.github.io/">Yushan Zheng</a>.
   </p>
-  <p class="intro-block__line intro-block__line--secondary">
+  <p class="intro-block__line">
     I work on machine learning for digital pathology, with a focus on
     representation learning and self-supervised methods for gigapixel histopathology WSIs.
   </p>
