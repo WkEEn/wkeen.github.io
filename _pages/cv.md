@@ -11,35 +11,20 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D. in Pattern Recognition and Intelligent Systems, Beihang University, Beijing, China, 2021–Present
+* B.Eng. in Software Engineering, Hefei University of Technology, Anhui, China, 2017–2021
 
-Work experience
+Research experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* 2021–Present: PhD Student, REMEX Lab, Beihang University  
+  * Research on histopathology image analysis, digital pathology, representation learning, and self-supervised learning for gigapixel WSIs.
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Machine learning & deep learning
+* Representation learning & self-supervised learning
+* Medical / histopathology image analysis
+* Python (PyTorch, NumPy, scientific computing)
 
 Publications
 ======
@@ -58,7 +43,4 @@ Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+
