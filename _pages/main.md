@@ -30,6 +30,25 @@ redirect_from:
 </div>
 <!-- markdownlint-enable MD033 -->
 
+## Visitors
+<!-- markdownlint-disable MD033 -->
+
+<div class="visitor-map">
+  <a title="free world map tracker" href="https://24counter.com/vmap/1770028454/">
+    <img
+      title="free world map counter"
+      src="https://24counter.com/map/view.php?type=180&id=1770028454"
+      border="1"
+      alt="world map hits counter"
+    />
+  </a>
+  <div class="visitor-map__note">
+    <a href="https://24counter.com/map/">map counter</a>
+  </div>
+</div>
+
+<!-- markdownlint-enable MD033 -->
+
 ## News
 <!-- markdownlint-disable MD033 -->
 

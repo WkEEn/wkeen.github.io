@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Visitor map (home)
+   ========================================================================== */
+
+.visitor-map {
+  margin-top: 2rem;
+}
+
+.visitor-map img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visitor-map__note {
+  margin-top: 0.25rem;
+  font-size: $type-size-7;
+  color: var(--global-text-color-light);
+}
+
