@@ -1,0 +1,91 @@
+{% include base_path %}
+
+{% assign title = post.title %}
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% endif %}
+
+{% assign year = post.date | default: "1900-01-01" | date: "%Y" %}
+
+{% comment %}
+Front matter fields supported by this card:
+- header.teaser: image filename under /images/ OR full URL
+- paperurl or pdfurl: PDF / landing page
+- codeurl: source code repo
+- bibtexurl: bibtex file/url
+- citation: authors string (as you already use)
+- abstract: short abstract text (optional)
+{% endcomment %}
+
+{% assign teaser = nil %}
+{% if post.header and post.header.teaser %}
+  {% assign teaser = post.header.teaser %}
+{% endif %}
+
+{% assign pdf_link = post.pdfurl | default: post.paperurl %}
+
+<div class="pub-card">
+  {% if teaser %}
+    <div class="pub-card__media">
+      <img
+        class="pub-card__img"
+        src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | prepend: '/images/' | prepend: base_path }}{% endif %}"
+        alt=""
+        loading="lazy"
+      />
+    </div>
+  {% endif %}
+
+  <div class="pub-card__body">
+    <h3 class="pub-card__title">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% if post.link %}
+        <a class="pub-card__ext" href="{{ post.link }}" aria-label="External link">
+          <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+    </h3>
+
+    {% if post.citation %}
+      <div class="pub-card__authors">{{ post.citation | markdownify | remove: "<p>" | remove: "</p>" }}</div>
+    {% endif %}
+
+    {% if post.venue %}
+      <div class="pub-card__venue"><i>{{ post.venue }}</i>, {{ year }}</div>
+    {% endif %}
+
+    <div class="pub-card__actions">
+      {% if pdf_link %}
+        <a class="btn btn--info btn--small" href="{{ pdf_link }}">
+          <i class="fas fa-file-pdf icon" aria-hidden="true"></i>PDF
+        </a>
+      {% endif %}
+
+      {% if post.abstract %}
+        <a class="btn btn--inverse btn--small" href="#pub-abs-{{ post.slug | default: post.title | slugify }}">
+          <i class="fas fa-align-left icon" aria-hidden="true"></i>Abstract
+        </a>
+      {% endif %}
+
+      {% if post.codeurl %}
+        <a class="btn btn--success btn--small" href="{{ post.codeurl }}">
+          <i class="fab fa-github icon" aria-hidden="true"></i>Code
+        </a>
+      {% endif %}
+
+      {% if post.bibtexurl %}
+        <a class="btn btn--warning btn--small" href="{{ post.bibtexurl }}">
+          <i class="fas fa-quote-right icon" aria-hidden="true"></i>BibTeX
+        </a>
+      {% endif %}
+    </div>
+
+    {% if post.abstract %}
+      <details class="pub-card__abstract" id="pub-abs-{{ post.slug | default: post.title | slugify }}">
+        <summary>Abstract</summary>
+        <div class="pub-card__abstract-text">{{ post.abstract | markdownify }}</div>
+      </details>
+    {% endif %}
+  </div>
+</div>
+

@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Publication cards (custom)
+   ========================================================================== */
+
+.pub-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.pub-card__media {
+  flex: 0 0 220px;
+}
+
+.pub-card__img {
+  width: 100%;
+  height: auto;
+  border-radius: $border-radius;
+  border: 1px solid var(--global-border-color);
+  background: var(--global-bg-color);
+}
+
+.pub-card__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.pub-card__title {
+  margin: 0 0 0.35rem 0;
+  font-size: $type-size-4;
+  line-height: 1.25;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.pub-card__ext {
+  margin-left: 0.35rem;
+  font-size: 0.85em;
+  text-decoration: none;
+}
+
+.pub-card__authors {
+  margin: 0 0 0.35rem 0;
+  font-size: $type-size-6;
+}
+
+.pub-card__venue {
+  margin: 0 0 0.6rem 0;
+  font-size: $type-size-6;
+  color: var(--global-text-color-light);
+}
+
+.pub-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.25rem 0 0.25rem 0;
+}
+
+.pub-card__abstract {
+  margin-top: 0.35rem;
+
+  summary {
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+  }
+}
+
+.pub-card__abstract-text {
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 700px) {
+  .pub-card {
+    flex-direction: column;
+  }
+
+  .pub-card__media {
+    flex-basis: auto;
+    max-width: 480px;
+  }
+}
+
