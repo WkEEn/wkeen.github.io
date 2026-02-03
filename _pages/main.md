@@ -17,7 +17,7 @@ redirect_from:
     <a href="https://zhengyushan.github.io/">Yushan Zheng</a>.
   </p>
   <p class="intro-block__line">
-    I work on machine learning for digital pathology, with a focus on
+    I have been working on machine learning for digital pathology, with a focus on
     representation learning and self-supervised methods for gigapixel histopathology WSIs.
   </p>
   <ul class="intro-tags">
