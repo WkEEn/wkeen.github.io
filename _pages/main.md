@@ -80,7 +80,7 @@ redirect_from:
     <div class="news-item__meta">07/2024</div>
     <div class="news-item__main">
       Our paper <a href="https://doi.org/10.1016/j.media.2024.103163">Histopathology language-image representation learning for fine-grained digital pathology cross-modal retrieval</a>
-      has been accepted by <strong>MICCAI 2024</strong>.
+      has been accepted by <strong>MIA</strong>.
     </div>
   </div>
 </div>
