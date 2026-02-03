@@ -45,6 +45,36 @@ redirect_from:
   </div>
 </div>
 
+<div class="news-list">
+  <div class="news-item">
+    <div class="news-item__meta">01/2026</div>
+    <div class="news-item__main">
+      Our paper <a href="https://doi.org/10.1016/j.patcog.2026.113135">Lifelong Content-based Histopathology Image Retrieval via Bilevel Coreset Selection and Distance Consistency Rehearsal</a>
+      has been accepted by <strong>PR</strong>.
+    </div>
+  </div>
+</div>
+
+<div class="news-list">
+  <div class="news-item">
+    <div class="news-item__meta">12/2024</div>
+    <div class="news-item__main">
+      Our paper <a href="https://doi.org/10.1109/TMI.2024.3513358">Pan-cancer histopathology WSI pre-training with position-aware masked autoencoder</a>
+      has been accepted by <strong>TMI</strong>.
+    </div>
+  </div>
+</div>
+
+<div class="news-list">
+  <div class="news-item">
+    <div class="news-item__meta">12/2024</div>
+    <div class="news-item__main">
+      Our paper <a href="https://doi.org/10.1007/978-3-031-72083-3_26">Lifelong histopathology whole slide image retrieval via distance consistency rehearsal</a>
+      has been accepted by <strong>MICCAI 2024</strong>.
+    </div>
+  </div>
+</div>
+
 <!-- 复制下面这一段即可新增一条 News（推荐保持一句话，尽量精炼）
 <div class="news-item">
   <div class="news-item__meta">MM/YYYY</div>
