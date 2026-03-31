@@ -9,7 +9,7 @@
 }
 
 .news-scroll {
-  height: 240px; /* 固定窗口长度：超出则滚动 */
+  height: 40px; /* 固定窗口长度：超出则滚动 */
   overflow-y: auto;
   padding-right: 0.5rem; /* 给滚动条留点空间 */
 }
