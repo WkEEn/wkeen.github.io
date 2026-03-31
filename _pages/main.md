@@ -30,57 +30,49 @@ redirect_from:
 </div>
 <!-- markdownlint-enable MD033 -->
 
-
-
 ## News
 <!-- markdownlint-disable MD033 -->
 
-<div class="news-list">
-  <div class="news-item">
-    <div class="news-item__meta">01/2026</div>
-    <div class="news-item__main">
-      Our paper <a href="https://openreview.net/forum?id=24QX6XpvSL">Histopathology-Genomics Multi-modal Structural Representation Learning for Data-Efficient Precision Oncology</a>
-      has been accepted by <strong>ICLR 2026!</strong>. See you in Rio.
+<div class="news-scroll">
+  <div class="news-list">
+    <div class="news-item">
+      <div class="news-item__meta">01/2026</div>
+      <div class="news-item__main">
+        Our paper <a href="https://openreview.net/forum?id=24QX6XpvSL">Histopathology-Genomics Multi-modal Structural Representation Learning for Data-Efficient Precision Oncology</a>
+        has been accepted by <strong>ICLR 2026!</strong>. See you in Rio.
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="news-list">
-  <div class="news-item">
-    <div class="news-item__meta">01/2026</div>
-    <div class="news-item__main">
-      Our paper <a href="https://doi.org/10.1016/j.patcog.2026.113135">Lifelong Content-based Histopathology Image Retrieval via Bilevel Coreset Selection and Distance Consistency Rehearsal</a>
-      has been accepted by <strong>PR</strong>.
+    <div class="news-item">
+      <div class="news-item__meta">01/2026</div>
+      <div class="news-item__main">
+        Our paper <a href="https://doi.org/10.1016/j.patcog.2026.113135">Lifelong Content-based Histopathology Image Retrieval via Bilevel Coreset Selection and Distance Consistency Rehearsal</a>
+        has been accepted by <strong>PR</strong>.
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="news-list">
-  <div class="news-item">
-    <div class="news-item__meta">12/2024</div>
-    <div class="news-item__main">
-      Our paper <a href="https://doi.org/10.1109/TMI.2024.3513358">Pan-cancer histopathology WSI pre-training with position-aware masked autoencoder</a>
-      has been accepted by <strong>TMI</strong>.
+    <div class="news-item">
+      <div class="news-item__meta">12/2024</div>
+      <div class="news-item__main">
+        Our paper <a href="https://doi.org/10.1109/TMI.2024.3513358">Pan-cancer histopathology WSI pre-training with position-aware masked autoencoder</a>
+        has been accepted by <strong>TMI</strong>.
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="news-list">
-  <div class="news-item">
-    <div class="news-item__meta">10/2024</div>
-    <div class="news-item__main">
-      Our paper <a href="https://doi.org/10.1007/978-3-031-72083-3_26">Lifelong histopathology whole slide image retrieval via distance consistency rehearsal</a>
-      has been accepted by <strong>MICCAI 2024</strong>.
+    <div class="news-item">
+      <div class="news-item__meta">10/2024</div>
+      <div class="news-item__main">
+        Our paper <a href="https://doi.org/10.1007/978-3-031-72083-3_26">Lifelong histopathology whole slide image retrieval via distance consistency rehearsal</a>
+        has been accepted by <strong>MICCAI 2024</strong>.
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="news-list">
-  <div class="news-item">
-    <div class="news-item__meta">07/2024</div>
-    <div class="news-item__main">
-      Our paper <a href="https://doi.org/10.1016/j.media.2024.103163">Histopathology language-image representation learning for fine-grained digital pathology cross-modal retrieval</a>
-      has been accepted by <strong>MIA</strong>.
+    <div class="news-item">
+      <div class="news-item__meta">07/2024</div>
+      <div class="news-item__main">
+        Our paper <a href="https://doi.org/10.1016/j.media.2024.103163">Histopathology language-image representation learning for fine-grained digital pathology cross-modal retrieval</a>
+        has been accepted by <strong>MIA</strong>.
+      </div>
     </div>
   </div>
 </div>
