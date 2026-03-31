@@ -19,11 +19,12 @@
 
 .pub-card__img {
   width: 100%;
-  height: auto;
-  max-height: 210px;
+  height: 190px; /* 统一缩略图高度 */
   border-radius: $border-radius;
   border: 1px solid var(--global-border-color);
   background: var(--global-bg-color);
+  object-fit: cover;
+  object-position: center;
 }
 
 .pub-card__badge {
