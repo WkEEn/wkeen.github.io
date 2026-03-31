@@ -10,6 +10,7 @@
 {% comment %}
 Front matter fields supported by this card:
 - header.teaser: image filename under /images/ OR full URL
+- venue_abbr: short venue name shown on thumbnail badge (e.g. "TMI", "ICLR")
 - paperurl or pdfurl: PDF / landing page
 - codeurl: source code repo
 - bibtexurl: bibtex file/url
@@ -27,6 +28,11 @@ Front matter fields supported by this card:
 <div class="pub-card">
   {% if teaser %}
     <div class="pub-card__media">
+      {% if post.venue_abbr or post.venue %}
+        <div class="pub-card__badge">
+          {{ post.venue_abbr | default: post.venue }}
+        </div>
+      {% endif %}
       <img
         class="pub-card__img"
         src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | prepend: '/images/' | prepend: base_path }}{% endif %}"
