@@ -14,16 +14,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.35rem;
 }
 
 .pub-card__img {
   width: 100%;
-  height: 220px; /* 统一缩略图高度 */
+  height: auto;        /* 按原始比例缩放 */
+  max-height: 150px;   /* 统一最大高度，不裁剪 */
   border-radius: $border-radius;
   border: 1px solid var(--global-border-color);
   background: var(--global-bg-color);
-  object-fit: cover;
+  object-fit: contain; /* 保证完整显示 */
   object-position: center;
 }
 
