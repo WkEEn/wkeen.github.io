@@ -23,7 +23,7 @@ repository               : "https://github.com/WkEEn/wkeen.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpeg"
   name             : "Kun Wu"
   bio              : "PhD student in Pattern Recognition and Intelligent Systems"
   location         : "Beijing, China"
