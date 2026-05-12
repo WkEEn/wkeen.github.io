@@ -1,0 +1,38 @@
+# News and Announcements
+# Format: 
+# - date: "MM/YYYY"
+#   title: "Paper topic"
+#   venue: "Venue Name"
+#   link: "URL to paper/announcement"
+#   emoji: "icon emoji (optional)"
+
+- date: "01/2026"
+  title: "Histopathology-Genomics Multi-modal Structural Representation Learning for Data-Efficient Precision Oncology"
+  venue: "ICLR 2026"
+  link: "https://openreview.net/forum?id=24QX6XpvSL"
+  note: "See you in Rio!"
+  emoji: "🎉"
+
+- date: "01/2026"
+  title: "Lifelong Content-based Histopathology Image Retrieval via Bilevel Coreset Selection and Distance Consistency Rehearsal"
+  venue: "Pattern Recognition"
+  link: "https://doi.org/10.1016/j.patcog.2026.113135"
+  emoji: "📄"
+
+- date: "12/2024"
+  title: "Pan-cancer histopathology WSI pre-training with position-aware masked autoencoder"
+  venue: "IEEE Transactions on Medical Imaging"
+  link: "https://doi.org/10.1109/TMI.2024.3513358"
+  emoji: "📊"
+
+- date: "10/2024"
+  title: "Lifelong histopathology whole slide image retrieval via distance consistency rehearsal"
+  venue: "MICCAI 2024"
+  link: "https://doi.org/10.1007/978-3-031-72083-3_26"
+  emoji: "🏆"
+
+- date: "07/2024"
+  title: "Histopathology language-image representation learning for fine-grained digital pathology cross-modal retrieval"
+  venue: "Medical Image Analysis"
+  link: "https://doi.org/10.1016/j.media.2024.103163"
+  emoji: "🔬"

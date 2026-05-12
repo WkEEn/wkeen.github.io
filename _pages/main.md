@@ -35,53 +35,26 @@ redirect_from:
 
 <div class="news-scroll">
   <div class="news-list">
+    {% for item in site.data.news %}
     <div class="news-item">
-      <div class="news-item__meta">01/2026</div>
+      <div class="news-item__meta">{{ item.date }}</div>
       <div class="news-item__main">
-        Our paper <a href="https://openreview.net/forum?id=24QX6XpvSL">Histopathology-Genomics Multi-modal Structural Representation Learning for Data-Efficient Precision Oncology</a>
-        has been accepted by <strong>ICLR 2026!</strong>. See you in Rio.
+        {% if item.emoji %}<span style="margin-right: 5px;">{{ item.emoji }}</span>{% endif %}
+        Our paper <a href="{{ item.link }}">{{ item.title }}</a>
+        has been accepted by <strong>{{ item.venue }}</strong>{% if item.note %}.{{ item.note }}{% endif %}
       </div>
     </div>
-
-    <div class="news-item">
-      <div class="news-item__meta">01/2026</div>
-      <div class="news-item__main">
-        Our paper <a href="https://doi.org/10.1016/j.patcog.2026.113135">Lifelong Content-based Histopathology Image Retrieval via Bilevel Coreset Selection and Distance Consistency Rehearsal</a>
-        has been accepted by <strong>PR</strong>.
-      </div>
-    </div>
-
-    <div class="news-item">
-      <div class="news-item__meta">12/2024</div>
-      <div class="news-item__main">
-        Our paper <a href="https://doi.org/10.1109/TMI.2024.3513358">Pan-cancer histopathology WSI pre-training with position-aware masked autoencoder</a>
-        has been accepted by <strong>TMI</strong>.
-      </div>
-    </div>
-
-    <div class="news-item">
-      <div class="news-item__meta">10/2024</div>
-      <div class="news-item__main">
-        Our paper <a href="https://doi.org/10.1007/978-3-031-72083-3_26">Lifelong histopathology whole slide image retrieval via distance consistency rehearsal</a>
-        has been accepted by <strong>MICCAI 2024</strong>.
-      </div>
-    </div>
-
-    <div class="news-item">
-      <div class="news-item__meta">07/2024</div>
-      <div class="news-item__main">
-        Our paper <a href="https://doi.org/10.1016/j.media.2024.103163">Histopathology language-image representation learning for fine-grained digital pathology cross-modal retrieval</a>
-        has been accepted by <strong>MIA</strong>.
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </div>
 
-<!-- 复制下面这一段即可新增一条 News（推荐保持一句话，尽量精炼）
-<div class="news-item">
-  <div class="news-item__meta">MM/YYYY</div>
-  <div class="news-item__main">Your news with <a href="https://example.com">a link</a>.</div>
-</div>
+<!-- 要新增新闻，请编辑 _data/news.yml 文件，格式如下：
+- date: "MM/YYYY"
+  title: "论文标题"
+  venue: "会议/期刊名称"
+  link: "链接"
+  note: "备注（可选）"
+  emoji: "😊"
 -->
 
 <!-- markdownlint-enable MD033 -->
