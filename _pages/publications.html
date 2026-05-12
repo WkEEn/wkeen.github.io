@@ -15,16 +15,6 @@ author_profile: true
 <div style="margin: 20px 0; padding: 15px; background-color: #f5f5f5; border-radius: 5px;">
   <h3 style="margin-top: 0;">Filter Publications</h3>
   
-  <!-- Search Box -->
-  <div style="margin-bottom: 15px;">
-    <input 
-      type="text" 
-      id="pubSearchBox" 
-      placeholder="Search by title, author, or venue..."
-      style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px;"
-    />
-  </div>
-
   <!-- Filter Buttons -->
   <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
     <button 
@@ -119,13 +109,11 @@ author_profile: true
 document.addEventListener('DOMContentLoaded', function() {
   const filterBtns = document.querySelectorAll('.pub-filter-btn');
   const yearBtns = document.querySelectorAll('.pub-year-btn');
-  const searchBox = document.getElementById('pubSearchBox');
   const pubItems = document.querySelectorAll('.pub-item');
   const pubCount = document.getElementById('pubCount');
   
   let activeCategory = 'all';
   let activeYear = 'all';
-  let searchQuery = '';
 
   function updateFilter() {
     let visibleCount = 0;
@@ -133,12 +121,8 @@ document.addEventListener('DOMContentLoaded', function() {
     pubItems.forEach(item => {
       const matchCategory = activeCategory === 'all' || item.dataset.category === activeCategory;
       const matchYear = activeYear === 'all' || item.dataset.year === activeYear;
-      const matchSearch = searchQuery === '' || 
-                         item.dataset.title.includes(searchQuery.toLowerCase()) ||
-                         item.dataset.venue.includes(searchQuery.toLowerCase()) ||
-                         item.dataset.authors.includes(searchQuery.toLowerCase());
       
-      if (matchCategory && matchYear && matchSearch) {
+      if (matchCategory && matchYear) {
         item.style.display = '';
         visibleCount++;
       } else {
@@ -196,11 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
       activeYear = this.dataset.year;
       updateFilter();
     });
-  });
-
-  searchBox.addEventListener('input', function() {
-    searchQuery = this.value;
-    updateFilter();
   });
 
   updateFilter();

@@ -90,20 +90,28 @@ redirect_from:
 </div>
 
 ## Visitors
+
 <!-- markdownlint-disable MD033 -->
 
-<div class="visitor-map">
-  <a title="free world map tracker" href="https://24counter.com/vmap/1770028454/">
-    <img
-      title="free world map counter"
-      src="https://24counter.com/map/view.php?type=180&id=1770028454"
-      border="1"
-      alt="world map hits counter"
-    />
-  </a>
-  <div class="visitor-map__note">
-    <a href="https://24counter.com/map/">map counter</a>
-  </div>
+<div style="margin-top: 20px; padding: 20px; background: #f9f9f9; border-radius: 8px; text-align: center;">
+  <h3 style="margin-top: 0; color: #333;">Visitor Analytics</h3>
+  
+  <!-- Option 1: Simple Visitor Counter with Flag Counter -->
+  <p style="margin: 15px 0; font-size: 14px;">
+    <a href="https://flagcounter.com/details/ZhZNrW" title="Flag Counter">
+      <img src="https://flagcounter.com/count/ZhZNrW/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0" />
+    </a>
+  </p>
+  
+  <!-- Option 2: Google Analytics Badge (optional, add your tracking ID) -->
+  <p style="margin: 15px 0; font-size: 13px; color: #666;">
+    📊 Powered by <a href="https://flagcounter.com/" style="color: #0066cc; text-decoration: none;">Flag Counter</a> | 
+    <a href="https://analytics.google.com/" style="color: #0066cc; text-decoration: none;">Visitor Insights</a>
+  </p>
+  
+  <p style="margin: 15px 0 0 0; font-size: 12px; color: #999;">
+    This page tracks visitor statistics to understand audience interests and improve content.
+  </p>
 </div>
 
 <!-- markdownlint-enable MD033 -->
