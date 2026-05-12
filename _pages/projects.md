@@ -39,30 +39,6 @@ A collection of my research projects, code repositories, and open-source contrib
   </div>
 </div>
 
-<!-- GigaPathCL Project -->
-<div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: #fafafa;">
-  <div style="display: flex; align-items: start; gap: 20px;">
-    <div style="flex: 1;">
-      <h3 style="margin-top: 0; margin-bottom: 5px;">
-        <a href="https://github.com/WkEEn/GigaPathCL" style="color: #0066cc; text-decoration: none;">GigaPathCL</a>
-      </h3>
-      <p style="margin: 0 0 10px 0; font-size: 14px; color: #666;">
-        <strong>Contrastive Learning for Historical Pathology Images</strong>
-      </p>
-      <p style="margin: 10px 0; font-size: 14px; line-height: 1.6;">
-        Implementation of contrastive learning methods for gigapixel WSI pre-training using the GigaPath foundation model. Includes multiple variants for survival prediction, cancer grading, and representation learning.
-      </p>
-      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
-        <span style="background: #e3f2fd; color: #1976d2; padding: 4px 8px; border-radius: 3px; font-size: 12px;">Contrastive Learning</span>
-        <span style="background: #f3e5f5; color: #7b1fa2; padding: 4px 8px; border-radius: 3px; font-size: 12px;">Self-Supervised Learning</span>
-        <span style="background: #fff3e0; color: #e65100; padding: 4px 8px; border-radius: 3px; font-size: 12px;">WSI Analysis</span>
-      </div>
-      <div style="display: flex; gap: 10px; margin-top: 12px; font-size: 13px;">
-        <a href="https://github.com/WkEEn/GigaPathCL" style="color: #0066cc; text-decoration: none;">📌 GitHub</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- PAMA Project -->
 <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: #fafafa;">
@@ -95,7 +71,7 @@ A collection of my research projects, code repositories, and open-source contrib
   <div style="display: flex; align-items: start; gap: 20px;">
     <div style="flex: 1;">
       <h3 style="margin-top: 0; margin-bottom: 5px;">
-        <a href="https://github.com/WkEEn/LifelongWSIRetrieval" style="color: #0066cc; text-decoration: none;">Lifelong WSI Retrieval</a>
+        <a href="https://github.com/OliverZXY/LCBHIR" style="color: #0066cc; text-decoration: none;">Lifelong WSI Retrieval</a>
       </h3>
       <p style="margin: 0 0 10px 0; font-size: 14px; color: #666;">
         <strong>Continual Learning for Histopathology Image Retrieval</strong>
@@ -122,7 +98,7 @@ A collection of my research projects, code repositories, and open-source contrib
   <div style="display: flex; align-items: start; gap: 20px;">
     <div style="flex: 1;">
       <h3 style="margin-top: 0; margin-bottom: 5px;">
-        <a href="https://github.com/WkEEn/HistoVLP" style="color: #0066cc; text-decoration: none;">HistoVLP</a>
+        <a href="https://github.com/hudingyi/FGCR" style="color: #0066cc; text-decoration: none;">HistoVLP</a>
       </h3>
       <p style="margin: 0 0 10px 0; font-size: 14px; color: #666;">
         <strong>Vision-Language Pre-training for Histopathology</strong>
@@ -147,7 +123,7 @@ A collection of my research projects, code repositories, and open-source contrib
 
 ---
 
-## Tool & Library Projects
+<!-- ## Tool & Library Projects
 
 <div style="display: grid; gap: 20px; grid-template-columns: 1fr;">
 
@@ -201,15 +177,15 @@ A collection of my research projects, code repositories, and open-source contrib
   </div>
 </div>
 
-</div>
+</div> -->
 
 ---
 
 ## Research Topics
 
-My research focuses on several key areas in digital pathology and biomedical image analysis:
+My research focuses on several key areas in digital pathology and multi-modal biomedical data analysis:
 
-- **Representation Learning**: Self-supervised and contrastive learning methods for gigapixel histopathology images
+- **Representation Learning**: Self-supervised learning methods for gigapixel histopathology images
 - **Multi-Modal Fusion**: Integrating whole-slide images with genomics, clinical data, and text
 - **Graph Neural Networks**: Structure learning and dynamic graph construction for patient stratification
 - **Foundation Models**: Leveraging pre-trained models for histopathology feature extraction
