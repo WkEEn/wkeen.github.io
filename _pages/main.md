@@ -93,6 +93,61 @@ redirect_from:
 
 <!-- markdownlint-disable MD033 -->
 
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIINfQnVx2d7vMThqPwLFIuQmRGh3Y2H0Wk="
+  crossorigin=""
+>
+
+<div class="visitor-panel">
+  <div class="visitor-panel__header">
+    <div>
+      <h3>Visitor Analytics</h3>
+      <p>Live visit count and approximate geographic origin for this homepage.</p>
+    </div>
+  </div>
+
+  <div class="visitor-panel__grid">
+    <div class="visitor-card visitor-card--count">
+      <span class="visitor-card__label">Total Page Views</span>
+      <span class="visitor-card__value visitor-card__value--badge">
+        <img
+          src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwkeen.github.io&count_bg=%23007ACC&title_bg=%23555A64&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false"
+          alt="Total visits counter"
+          loading="lazy"
+        >
+      </span>
+      <span class="visitor-card__note">Counted through a public visit counter.</span>
+    </div>
+
+    <div class="visitor-card">
+      <span class="visitor-card__label">Current Visitor Location</span>
+      <span id="visitor-location-text" class="visitor-card__value visitor-card__value--text">Detecting</span>
+      <span id="visitor-ip-note" class="visitor-card__note">Approximate city-level location.</span>
+    </div>
+  </div>
+
+  <div class="visitor-map-shell">
+    <div id="visitor-map" class="visitor-map" role="img" aria-label="Visitor geographic map">
+      <div class="visitor-map__fallback">Loading visitor map...</div>
+    </div>
+  </div>
+
+  <p class="visitor-panel__privacy">
+    Location is resolved in the browser from public IP metadata and is approximate. No personal visitor data is stored by this site.
+  </p>
+</div>
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+  defer
+></script>
+<script src="/assets/js/visitor-stats.js" defer></script>
+
+{% comment %}
 <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 12px;">
   <h3 style="margin-top: 0; color: #2c3e50; font-size: 20px;">🌍 Visitor Analytics</h3>
   
@@ -154,5 +209,6 @@ redirect_from:
     </p>
   </div>
 </div>
+{% endcomment %}
 
 <!-- markdownlint-enable MD033 -->
