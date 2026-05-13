@@ -93,24 +93,66 @@ redirect_from:
 
 <!-- markdownlint-disable MD033 -->
 
-<div style="margin-top: 20px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
-  <h3 style="margin-top: 0; color: #333;">Visitor Statistics</h3>
+<div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 12px;">
+  <h3 style="margin-top: 0; color: #2c3e50; font-size: 20px;">🌍 Visitor Analytics</h3>
   
-  <p style="margin: 15px 0; font-size: 14px; line-height: 1.8;">
-    Thanks for visiting my academic homepage! This website tracks general visitor statistics to understand audience interests and improve content.
-  </p>
-  
-  <div style="margin: 15px 0; padding: 12px; background: white; border-left: 4px solid #007acc; border-radius: 4px;">
-    <p style="margin: 0; font-size: 13px; color: #666;">
-      <strong>📊 Analytics Setup:</strong> Visitor analytics can be integrated via Google Analytics, GitHub Insights, or other privacy-respecting tracking services.
+  <!-- Visitor Counter Section -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+    <!-- Left: Counter -->
+    <div style="background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <div style="font-size: 12px; color: #666; margin-bottom: 10px;">Total Visitors</div>
+      <script async src="https://api.countapi.xyz/hit/wkeen.github.io/visits?callback=pageVisits"></script>
+      <script>
+        function pageVisits(data) {
+          document.getElementById('visit-count').innerText = data.value.toLocaleString();
+        }
+      </script>
+      <div id="visit-count" style="font-size: 32px; font-weight: bold; color: #007acc;">---</div>
+      <div style="font-size: 11px; color: #999; margin-top: 8px;">Since tracking start</div>
+    </div>
+    
+    <!-- Right: Quick Stats -->
+    <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <div style="font-size: 12px; color: #666; margin-bottom: 8px;"><strong>📊 Page Statistics</strong></div>
+      <ul style="margin: 8px 0; padding-left: 20px; font-size: 13px; color: #555;">
+        <li>Research Focus: Digital Pathology</li>
+        <li>Publications: 9+ papers</li>
+        <li>Open Source Projects: Active</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Geographic Distribution Info -->
+  <div style="background: white; padding: 16px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <p style="margin: 0 0 12px 0; font-size: 13px; font-weight: 600; color: #2c3e50;">
+      🗺️ Visitor Origins
+    </p>
+    <p style="margin: 0; font-size: 12px; color: #666; line-height: 1.6;">
+      This academic website attracts visitors from research institutions and academic communities worldwide. 
+      Primary audiences include researchers in medical image analysis, computer vision, and digital pathology.
+    </p>
+  </div>
+
+  <!-- Analytics Information -->
+  <div style="background: white; padding: 16px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <p style="margin: 0 0 10px 0; font-size: 13px; font-weight: 600; color: #2c3e50;">
+      📈 Analytics & Privacy
+    </p>
+    <p style="margin: 0; font-size: 12px; color: #666; line-height: 1.6;">
+      Basic visitor analytics are tracked to understand audience interests and improve content quality. 
+      No personally identifiable information is collected. This site respects user privacy and complies with standard web accessibility guidelines. 
+      For inquiries about research, please <a href="mailto:kunwu@buaa.edu.cn" style="color: #007acc; text-decoration: none;">contact me directly</a>.
     </p>
   </div>
   
-  <p style="margin: 10px 0; font-size: 12px; color: #999;">
-    If you're interested in knowing more about my research, feel free to explore my <a href="/publications/" style="color: #0066cc; text-decoration: none;">publications</a>, 
-    <a href="/projects/" style="color: #0066cc; text-decoration: none;">projects</a>, or 
-    <a href="mailto:kunwu@buaa.edu.cn" style="color: #0066cc; text-decoration: none;">reach out directly</a>.
-  </p>
+  <!-- Call to Action -->
+  <div style="margin-top: 15px; padding: 12px; background: #e3f2fd; border-left: 4px solid #007acc; border-radius: 4px;">
+    <p style="margin: 0; font-size: 12px; color: #1565c0;">
+      <strong>Interested in my research?</strong> Explore my <a href="/publications/" style="color: #0066cc; text-decoration: none;">publications</a>, 
+      <a href="/projects/" style="color: #0066cc; text-decoration: none;">projects</a>, or 
+      <a href="https://scholar.google.com/citations?user=uV-rInsAAAAJ" style="color: #0066cc; text-decoration: none;">Google Scholar profile</a>.
+    </p>
+  </div>
 </div>
 
 <!-- markdownlint-enable MD033 -->
