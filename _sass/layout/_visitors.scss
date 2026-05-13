@@ -5,7 +5,9 @@
 .visitor-panel {
   margin-top: 0.75rem;
   padding: 0;
-  border: 1px solid var(--global-border-color);
+  width: 360px;
+  max-width: 100%;
+  border: 0;
   border-radius: 8px;
   background: var(--global-bg-color);
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
@@ -15,6 +17,8 @@
   min-height: 0;
   width: 360px;
   max-width: 100%;
+  height: 180px;
+  max-height: 180px;
   margin: 0;
   overflow: hidden;
   border-radius: 8px;

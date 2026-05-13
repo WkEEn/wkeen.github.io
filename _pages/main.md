@@ -94,9 +94,31 @@ redirect_from:
 <!-- markdownlint-disable MD033 -->
 
 <div class="visitor-panel">
-  <div class="visitor-map-shell" role="img" aria-label="Visitor geographic map">
+  <div class="visitor-map-shell" role="img" aria-label="Visitor geographic map" style="width: 360px; max-width: 100%; height: 180px; max-height: 180px; margin: 0; overflow: hidden;">
     <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=OtZhn6v8VHIO4Fbl7sfodB1fqxu0OE4cmqQD9fI2Hik&cl=ffffff&w=a"></script>
   </div>
+  <script>
+    (function () {
+      var shell = document.currentScript.previousElementSibling;
+      if (!shell) return;
+
+      function resizeVisitorMap() {
+        var nodes = shell.querySelectorAll("iframe, img, canvas, object, embed, div");
+        nodes.forEach(function (node) {
+          node.style.maxWidth = "100%";
+          node.style.width = "100%";
+          node.style.height = "180px";
+          node.style.maxHeight = "180px";
+          node.style.border = "0";
+          node.style.display = "block";
+        });
+      }
+
+      resizeVisitorMap();
+      window.setTimeout(resizeVisitorMap, 300);
+      window.setTimeout(resizeVisitorMap, 1200);
+    }());
+  </script>
 </div>
 
 <!-- markdownlint-enable MD033 -->
