@@ -11,180 +11,26 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- Publication Filter Section -->
-<div style="margin: 20px 0; padding: 15px; background-color: #f5f5f5; border-radius: 5px;">
-  <h3 style="margin-top: 0;">Filter Publications</h3>
-  
-  <!-- Filter Buttons -->
-  <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
-    <button 
-      class="pub-filter-btn active" 
-      data-filter="all"
-      style="padding: 6px 12px; border: 2px solid #007acc; background: #007acc; color: white; border-radius: 4px; cursor: pointer; font-size: 14px;"
-    >All Papers</button>
-    
-    {% if site.publication_category %}
-      {% for category in site.publication_category %}
-        <button 
-          class="pub-filter-btn" 
-          data-filter="{{ category[0] }}"
-          style="padding: 6px 12px; border: 2px solid #ddd; background: white; color: #333; border-radius: 4px; cursor: pointer; font-size: 14px;"
-        >{{ category[1].title }}</button>
-      {% endfor %}
-    {% endif %}
-  </div>
-
-  <!-- Year Filter -->
-  <div style="display: flex; gap: 5px; flex-wrap: wrap;">
-    {% assign years = "" | split: "," %}
-    {% for post in site.publications %}
-      {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
-      {% unless years contains year %}
-        {% assign years = years | push: year %}
-      {% endunless %}
-    {% endfor %}
-    
-    {% assign sorted_years = years | sort | reverse %}
-    <span style="align-self: center; margin-right: 10px; font-weight: 500;">Year:</span>
-    <button 
-      class="pub-year-btn active" 
-      data-year="all"
-      style="padding: 6px 12px; border: 2px solid #ddd; background: white; color: #333; border-radius: 4px; cursor: pointer; font-size: 14px;"
-    >All</button>
-    
-    {% for year in sorted_years %}
-      <button 
-        class="pub-year-btn" 
-        data-year="{{ year }}"
-        style="padding: 6px 12px; border: 2px solid #ddd; background: white; color: #333; border-radius: 4px; cursor: pointer; font-size: 14px;"
-      >{{ year }}</button>
-    {% endfor %}
-  </div>
-  
-  <div id="pubCount" style="margin-top: 10px; font-size: 13px; color: #666;"></div>
-</div>
-
-<!-- Publications List with Data Attributes for Filtering -->
-<div id="publicationsList">
-  {% if site.publication_category %}
-    {% for category in site.publication_category  %}
-      {% assign title_shown = false %}
-      {% for post in site.publications reversed %}
-        {% if post.category != category[0] %}
-          {% continue %}
-        {% endif %}
-        {% unless title_shown %}
-          <h2 class="pub-category-title" data-category="{{ category[0] }}">{{ category[1].title }}</h2><hr />
-          {% assign title_shown = true %}
-        {% endunless %}
-        <div 
-          class="pub-item" 
-          data-category="{{ post.category }}" 
-          data-year="{{ post.date | date: "%Y" }}"
-          data-title="{{ post.title | downcase }}"
-          data-venue="{{ post.venue | downcase }}"
-          data-authors="{{ post.citation | downcase }}"
-        >
-          {% include archive-single-publication-card.html %}
-        </div>
-      {% endfor %}
-    {% endfor %}
-  {% else %}
+<!-- Publications List -->
+{% if site.publication_category %}
+  {% for category in site.publication_category  %}
+    {% assign title_shown = false %}
     {% for post in site.publications reversed %}
-      <div 
-        class="pub-item" 
-        data-category="{{ post.category }}" 
-        data-year="{{ post.date | date: "%Y" }}"
-        data-title="{{ post.title | downcase }}"
-        data-venue="{{ post.venue | downcase }}"
-        data-authors="{{ post.citation | downcase }}"
-      >
-        {% include archive-single-publication-card.html %}
-      </div>
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h2>{{ category[1].title }}</h2><hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include archive-single-publication-card.html %}
     {% endfor %}
-  {% endif %}
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const filterBtns = document.querySelectorAll('.pub-filter-btn');
-  const yearBtns = document.querySelectorAll('.pub-year-btn');
-  const pubItems = document.querySelectorAll('.pub-item');
-  const pubCount = document.getElementById('pubCount');
-  
-  let activeCategory = 'all';
-  let activeYear = 'all';
-
-  function updateFilter() {
-    let visibleCount = 0;
-    
-    pubItems.forEach(item => {
-      const matchCategory = activeCategory === 'all' || item.dataset.category === activeCategory;
-      const matchYear = activeYear === 'all' || item.dataset.year === activeYear;
-      
-      if (matchCategory && matchYear) {
-        item.style.display = '';
-        visibleCount++;
-      } else {
-        item.style.display = 'none';
-      }
-    });
-
-    // Update category titles visibility
-    document.querySelectorAll('.pub-category-title').forEach(title => {
-      const category = title.dataset.category;
-      let hasVisibleItems = false;
-      
-      pubItems.forEach(item => {
-        if (item.dataset.category === category && item.style.display !== 'none') {
-          hasVisibleItems = true;
-        }
-      });
-      
-      title.style.display = hasVisibleItems ? '' : 'none';
-      const nextHr = title.nextElementSibling;
-      if (nextHr && nextHr.tagName === 'HR') {
-        nextHr.style.display = hasVisibleItems ? '' : 'none';
-      }
-    });
-
-    // Update count
-    pubCount.textContent = visibleCount + ' publication' + (visibleCount !== 1 ? 's' : '') + ' found';
-  }
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      filterBtns.forEach(b => {
-        b.style.background = 'white';
-        b.style.color = '#333';
-        b.style.borderColor = '#ddd';
-      });
-      this.style.background = '#007acc';
-      this.style.color = 'white';
-      this.style.borderColor = '#007acc';
-      activeCategory = this.dataset.filter;
-      updateFilter();
-    });
-  });
-
-  yearBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      yearBtns.forEach(b => {
-        b.style.background = 'white';
-        b.style.color = '#333';
-        b.style.borderColor = '#ddd';
-      });
-      this.style.background = '#007acc';
-      this.style.color = 'white';
-      this.style.borderColor = '#007acc';
-      activeYear = this.dataset.year;
-      updateFilter();
-    });
-  });
-
-  updateFilter();
-});
-</script>
+  {% endfor %}
+{% else %}
+  {% for post in site.publications reversed %}
+    {% include archive-single-publication-card.html %}
+  {% endfor %}
+{% endif %}
 
 
 

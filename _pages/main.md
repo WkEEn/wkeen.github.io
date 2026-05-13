@@ -93,24 +93,23 @@ redirect_from:
 
 <!-- markdownlint-disable MD033 -->
 
-<div style="margin-top: 20px; padding: 20px; background: #f9f9f9; border-radius: 8px; text-align: center;">
-  <h3 style="margin-top: 0; color: #333;">Visitor Analytics</h3>
+<div style="margin-top: 20px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+  <h3 style="margin-top: 0; color: #333;">Visitor Statistics</h3>
   
-  <!-- Option 1: Simple Visitor Counter with Flag Counter -->
-  <p style="margin: 15px 0; font-size: 14px;">
-    <a href="https://flagcounter.com/details/ZhZNrW" title="Flag Counter">
-      <img src="https://flagcounter.com/count/ZhZNrW/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0" />
-    </a>
+  <p style="margin: 15px 0; font-size: 14px; line-height: 1.8;">
+    Thanks for visiting my academic homepage! This website tracks general visitor statistics to understand audience interests and improve content.
   </p>
   
-  <!-- Option 2: Google Analytics Badge (optional, add your tracking ID) -->
-  <p style="margin: 15px 0; font-size: 13px; color: #666;">
-    📊 Powered by <a href="https://flagcounter.com/" style="color: #0066cc; text-decoration: none;">Flag Counter</a> | 
-    <a href="https://analytics.google.com/" style="color: #0066cc; text-decoration: none;">Visitor Insights</a>
-  </p>
+  <div style="margin: 15px 0; padding: 12px; background: white; border-left: 4px solid #007acc; border-radius: 4px;">
+    <p style="margin: 0; font-size: 13px; color: #666;">
+      <strong>📊 Analytics Setup:</strong> Visitor analytics can be integrated via Google Analytics, GitHub Insights, or other privacy-respecting tracking services.
+    </p>
+  </div>
   
-  <p style="margin: 15px 0 0 0; font-size: 12px; color: #999;">
-    This page tracks visitor statistics to understand audience interests and improve content.
+  <p style="margin: 10px 0; font-size: 12px; color: #999;">
+    If you're interested in knowing more about my research, feel free to explore my <a href="/publications/" style="color: #0066cc; text-decoration: none;">publications</a>, 
+    <a href="/projects/" style="color: #0066cc; text-decoration: none;">projects</a>, or 
+    <a href="mailto:kunwu@buaa.edu.cn" style="color: #0066cc; text-decoration: none;">reach out directly</a>.
   </p>
 </div>
 
