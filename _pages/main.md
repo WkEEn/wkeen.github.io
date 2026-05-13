@@ -122,14 +122,7 @@ redirect_from:
   </div>
 
   <div class="visitor-map-shell" role="img" aria-label="Visitor geographic map">
-    <a href="https://www.visitormap.org/" target="_blank" rel="noopener noreferrer" aria-label="Free Visitor Maps at VisitorMap.org">
-      <img
-        class="visitor-map-plugin"
-        src="https://www.visitormap.org/map/m:wkeengithubio/s:1/c:ffffff/p:dot/y:0.png"
-        alt="Free Visitor Maps at VisitorMap.org"
-        loading="lazy"
-      >
-    </a>
+    <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=OtZhn6v8VHIO4Fbl7sfodB1fqxu0OE4cmqQD9fI2Hik&cl=ffffff&w=a"></script>
   </div>
 
   <p class="visitor-panel__privacy">
