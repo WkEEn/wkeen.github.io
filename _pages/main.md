@@ -97,37 +97,6 @@ redirect_from:
   <div class="visitor-map-shell" role="img" aria-label="Visitor geographic map" style="width: 360px; max-width: 100%; height: 180px; max-height: 180px; margin: 0; overflow: hidden;">
     <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=OtZhn6v8VHIO4Fbl7sfodB1fqxu0OE4cmqQD9fI2Hik&cl=ffffff&w=a"></script>
   </div>
-  <script>
-    (function () {
-      var shell = document.currentScript.previousElementSibling;
-      if (!shell) return;
-
-      function fitVisitorMap() {
-        var children = Array.prototype.slice.call(shell.children).filter(function (child) {
-          return child.tagName.toLowerCase() !== "script";
-        });
-
-        if (!children.length) return;
-
-        var inner = shell.querySelector(".visitor-map-inner");
-        if (!inner) {
-          inner = document.createElement("div");
-          inner.className = "visitor-map-inner";
-          children.forEach(function (child) {
-            inner.appendChild(child);
-          });
-          shell.appendChild(inner);
-        }
-
-        inner.style.transform = "scale(0.45)";
-        inner.style.transformOrigin = "top left";
-      }
-
-      window.setTimeout(fitVisitorMap, 300);
-      window.setTimeout(fitVisitorMap, 1200);
-      window.setTimeout(fitVisitorMap, 2500);
-    }());
-  </script>
 </div>
 
 <!-- markdownlint-enable MD033 -->

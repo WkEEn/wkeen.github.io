@@ -27,13 +27,6 @@
   text-align: center;
 }
 
-.visitor-map-inner {
-  width: 800px;
-  height: 400px;
-  line-height: normal;
-  text-align: left;
-}
-
 .visitor-map-shell a {
   text-decoration: none;
 }
@@ -44,7 +37,4 @@
     height: 160px;
   }
 
-  .visitor-map-inner {
-    transform: scale(0.4) !important;
-  }
 }
