@@ -102,21 +102,30 @@ redirect_from:
       var shell = document.currentScript.previousElementSibling;
       if (!shell) return;
 
-      function resizeVisitorMap() {
-        var nodes = shell.querySelectorAll("iframe, img, canvas, object, embed, div");
-        nodes.forEach(function (node) {
-          node.style.maxWidth = "100%";
-          node.style.width = "100%";
-          node.style.height = "180px";
-          node.style.maxHeight = "180px";
-          node.style.border = "0";
-          node.style.display = "block";
+      function fitVisitorMap() {
+        var children = Array.prototype.slice.call(shell.children).filter(function (child) {
+          return child.tagName.toLowerCase() !== "script";
         });
+
+        if (!children.length) return;
+
+        var inner = shell.querySelector(".visitor-map-inner");
+        if (!inner) {
+          inner = document.createElement("div");
+          inner.className = "visitor-map-inner";
+          children.forEach(function (child) {
+            inner.appendChild(child);
+          });
+          shell.appendChild(inner);
+        }
+
+        inner.style.transform = "scale(0.45)";
+        inner.style.transformOrigin = "top left";
       }
 
-      resizeVisitorMap();
-      window.setTimeout(resizeVisitorMap, 300);
-      window.setTimeout(resizeVisitorMap, 1200);
+      window.setTimeout(fitVisitorMap, 300);
+      window.setTimeout(fitVisitorMap, 1200);
+      window.setTimeout(fitVisitorMap, 2500);
     }());
   </script>
 </div>

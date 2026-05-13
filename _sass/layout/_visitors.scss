@@ -27,21 +27,11 @@
   text-align: center;
 }
 
-.visitor-map-shell iframe,
-.visitor-map-shell img,
-.visitor-map-shell canvas,
-.visitor-map-shell object,
-.visitor-map-shell embed {
-  display: block;
-  width: 100% !important;
-  max-width: 100%;
-  height: 180px !important;
-  max-height: 180px;
-  border: 0;
-}
-
-.visitor-map-shell > div {
-  width: 100%;
+.visitor-map-inner {
+  width: 800px;
+  height: 400px;
+  line-height: normal;
+  text-align: left;
 }
 
 .visitor-map-shell a {
@@ -49,12 +39,12 @@
 }
 
 @include breakpoint(max-width $medium) {
-  .visitor-map-shell iframe,
-  .visitor-map-shell img,
-  .visitor-map-shell canvas,
-  .visitor-map-shell object,
-  .visitor-map-shell embed {
-    height: 160px !important;
-    max-height: 160px;
+  .visitor-map-shell {
+    width: 320px;
+    height: 160px;
+  }
+
+  .visitor-map-inner {
+    transform: scale(0.4) !important;
   }
 }
