@@ -82,24 +82,30 @@
 }
 
 .visitor-map-shell {
+  display: flex;
+  min-height: 220px;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   border: 1px solid var(--global-border-color);
   border-radius: 8px;
-  background: #f8fafc;
+  background: #fff;
 }
 
-.visitor-map {
+.visitor-map-shell a {
+  display: block;
   width: 100%;
-  height: 320px;
+  line-height: 0;
+  text-align: center;
 }
 
-.visitor-map__fallback {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  color: #64748b;
-  font-size: $type-size-6;
+.visitor-map-plugin {
+  display: block;
+  width: 100%;
+  max-width: 820px;
+  height: auto;
+  margin: 0 auto;
+  border: 0;
 }
 
 .visitor-panel__privacy {
@@ -119,8 +125,8 @@
     display: block;
   }
 
-  .visitor-map {
-    height: 260px;
+  .visitor-map-shell {
+    min-height: 160px;
   }
 }
 

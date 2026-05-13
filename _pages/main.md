@@ -93,18 +93,11 @@ redirect_from:
 
 <!-- markdownlint-disable MD033 -->
 
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIINfQnVx2d7vMThqPwLFIuQmRGh3Y2H0Wk="
-  crossorigin=""
->
-
 <div class="visitor-panel">
   <div class="visitor-panel__header">
     <div>
       <h3>Visitor Analytics</h3>
-      <p>Live visit count and approximate geographic origin for this homepage.</p>
+      <p>Geographic visitor map and total page views for this homepage.</p>
     </div>
   </div>
 
@@ -122,30 +115,27 @@ redirect_from:
     </div>
 
     <div class="visitor-card">
-      <span class="visitor-card__label">Current Visitor Location</span>
-      <span id="visitor-location-text" class="visitor-card__value visitor-card__value--text">Detecting</span>
-      <span id="visitor-ip-note" class="visitor-card__note">Approximate city-level location.</span>
+      <span class="visitor-card__label">Visitor Map</span>
+      <span class="visitor-card__value visitor-card__value--text">Global visitor origins</span>
+      <span class="visitor-card__note">Powered by VisitorMap-style public map widget.</span>
     </div>
   </div>
 
-  <div class="visitor-map-shell">
-    <div id="visitor-map" class="visitor-map" role="img" aria-label="Visitor geographic map">
-      <div class="visitor-map__fallback">Loading visitor map...</div>
-    </div>
+  <div class="visitor-map-shell" role="img" aria-label="Visitor geographic map">
+    <a href="https://www.visitormap.org/" target="_blank" rel="noopener noreferrer" aria-label="Free Visitor Maps at VisitorMap.org">
+      <img
+        class="visitor-map-plugin"
+        src="https://www.visitormap.org/map/m:wkeengithubio/s:1/c:ffffff/p:dot/y:0.png"
+        alt="Free Visitor Maps at VisitorMap.org"
+        loading="lazy"
+      >
+    </a>
   </div>
 
   <p class="visitor-panel__privacy">
-    Location is resolved in the browser from public IP metadata and is approximate. No personal visitor data is stored by this site.
+    Visitor locations are approximate and provided by the embedded visitor map service.
   </p>
 </div>
-
-<script
-  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin=""
-  defer
-></script>
-<script src="/assets/js/visitor-stats.js" defer></script>
 
 {% comment %}
 <div style="margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 12px;">
