@@ -35,10 +35,18 @@ redirect_from:
 <!-- markdownlint-disable MD033 -->
 
 <div class="job-seeking-card">
-  <div class="job-seeking-card__label">Seeking Internship Opportunities</div>
-  <p>
-    My research focuses on multimodal medical foundation models. I am currently seeking internship opportunities related to multimodal large language models and vision-language large models. Please feel free to contact me if there are relevant openings or collaboration opportunities.
-  </p>
+  <div class="job-seeking-card__content">
+    <div class="job-seeking-card__eyebrow">Open to Internship Opportunities</div>
+    <div class="job-seeking-card__label">Seeking roles in multimodal foundation models</div>
+    <p>
+      My research focuses on multimodal medical foundation models. I am currently seeking internship opportunities related to multimodal large language models and vision-language large models. Please feel free to contact me if there are relevant openings or collaboration opportunities.
+    </p>
+    <div class="job-seeking-card__footer">
+      <span>Multimodal LLMs</span>
+      <span>Vision-Language Models</span>
+      <a href="mailto:kunwu@buaa.edu.cn">Contact me</a>
+    </div>
+  </div>
 </div>
 
 <!-- markdownlint-enable MD033 -->
