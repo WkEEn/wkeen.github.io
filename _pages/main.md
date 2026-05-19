@@ -30,6 +30,19 @@ redirect_from:
 </div>
 <!-- markdownlint-enable MD033 -->
 
+## Opportunities
+
+<!-- markdownlint-disable MD033 -->
+
+<div class="job-seeking-card">
+  <div class="job-seeking-card__label">Seeking Internship Opportunities</div>
+  <p>
+    My research focuses on multimodal medical foundation models. I am currently seeking internship opportunities related to multimodal large language models and vision-language large models. Please feel free to contact me if there are relevant openings or collaboration opportunities.
+  </p>
+</div>
+
+<!-- markdownlint-enable MD033 -->
+
 ## News
 <!-- markdownlint-disable MD033 -->
 

@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Job seeking section (home)
+   ========================================================================== */
+
+.job-seeking-card {
+  margin: 0.5rem 0 1.25rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 8px;
+  background: var(--global-bg-color);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.10);
+}
+
+.job-seeking-card__label {
+  margin-bottom: 0.35rem;
+  font-family: $sans-serif;
+  font-size: $type-size-5;
+  font-weight: 700;
+  color: var(--global-base-color);
+}
+
+.job-seeking-card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .job-seeking-card {
+    padding: 0.85rem 0.95rem;
+  }
+}
