@@ -98,10 +98,10 @@ A collection of my research projects, code repositories, and open-source contrib
   <div style="display: flex; align-items: start; gap: 20px;">
     <div style="flex: 1;">
       <h3 style="margin-top: 0; margin-bottom: 5px;">
-        <a href="https://github.com/hudingyi/FGCR" style="color: #0066cc; text-decoration: none;">HistoVLP</a>
+        <a href="https://github.com/hudingyi/FGCR" style="color: #0066cc; text-decoration: none;">Digital Pathology Cross-modal Retrieval</a>
       </h3>
       <p style="margin: 0 0 10px 0; font-size: 14px; color: #666;">
-        <strong>Vision-Language Pre-training for Histopathology</strong>
+        <strong>Digital Pathology Vision-Language Cross-modal Retrieval</strong>
       </p>
       <p style="margin: 10px 0; font-size: 14px; line-height: 1.6;">
         Vision-language representation learning combining histopathology images and medical text. Enables fine-grained cross-modal retrieval and improved zero-shot diagnosis capabilities.
@@ -112,7 +112,7 @@ A collection of my research projects, code repositories, and open-source contrib
         <span style="background: #fff3e0; color: #e65100; padding: 4px 8px; border-radius: 3px; font-size: 12px;">Zero-Shot Learning</span>
       </div>
       <div style="display: flex; gap: 10px; margin-top: 12px; font-size: 13px;">
-        <a href="https://github.com/WkEEn/HistoVLP" style="color: #0066cc; text-decoration: none;">📌 GitHub</a>
+        <a href="https://github.com/hudingyi/FGCR" style="color: #0066cc; text-decoration: none;">📌 GitHub</a>
         <a href="https://doi.org/10.1016/j.media.2024.103163" style="color: #0066cc; text-decoration: none;">📄 Paper (MIA 2024)</a>
       </div>
     </div>
