@@ -20,4 +20,4 @@ package-lock.json
 .vscode/
 
 # Ignore claude.md
-.CLAUDE.md
+CLAUDE.md
